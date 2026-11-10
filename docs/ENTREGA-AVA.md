@@ -1,16 +1,15 @@
-# Controle da entrega final - ainda em preparação
+# Controle da entrega final — em preparação
 
-Não envie esta versão de desenvolvimento como trabalho final concluído. Os links abaixo só podem ser registrados depois de existir e testar os serviços correspondentes.
+| Artefato | Situação em 10/11/2026 |
+|---|---|
+| Código-fonte | https://github.com/vscaueh/cloudquiz-grupo-1 — privado; conferir acesso do professor antes da entrega |
+| Azure | https://victorious-pond-0a0cb9d10.5.azurestaticapps.net — publicado no plano Free e testado com Back4App |
+| Back4App | Cloud Code publicado, 24 perguntas, autenticação, partidas, respostas e resultados reais; classes privadas e índices únicos confirmados |
+| GitHub Actions | Testes e build aprovados nos PRs; deploy Azure inicial manual pela CLI oficial |
+| Codespaces | Configuração pronta; conferir sessão e link de preview |
+| Relatório técnico | Preparar a versão final com links, arquitetura, execução e evidências |
+| Vídeo obrigatório | Ainda não gravado; um vídeo por equipe, pode ser apresentado por apenas um integrante |
 
-| Artefato | Estado em 10/11/2026 | Evidência a reunir |
-|---|---|---|
-| Código-fonte no GitHub | Código local implementado; repositório remoto pendente | URL acessível, histórico e workflows |
-| Execução no Codespaces | .devcontainer pronto; sessão remota pendente | Link de preview e instruções de acesso |
-| Jogo no Azure | Build e workflow prontos; conta e deploy pendentes | URL HTTPS testada fora da conta administrativa |
-| Backend Back4App | Cloud Code e setup implementados; app remoto pendente | Classes, 24 questões, Auth, Answer e Score reais |
-| Relatório técnico final | Documentação de arquitetura e setup disponível | Finalizar com URLs e resultados efetivamente medidos |
-| Vídeo obrigatório | Ainda não gravado, conforme combinado | Um vídeo por equipe, arquivo ou link acessível |
-
-O vídeo deve mostrar proposta, jogo funcional, tecnologias e uso real das plataformas exigidas. Treino local não comprova Backend/Cloud. O aviso do professor permite apenas um integrante apresentando. O roteiro será preparado após validar a versão publicada.
+O vídeo deve mostrar proposta, funcionamento, tecnologias e utilização real das plataformas. O roteiro será preparado após o teste da equipe. Verificar o acesso do professor ao repositório privado e ao vídeo antes de enviar no AVA.
 
 Equipe: Caueh Bento de Lima Mota (26120706), Vinicius Ferreira dos Santos Correia (2522711), João Lucas Ferreira (2612740), Matheus Lucas Oliveira (2612700).

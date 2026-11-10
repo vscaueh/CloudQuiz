@@ -25,9 +25,16 @@ O preview depende de Codespace em execução e da visibilidade da porta. Não é
 3. O projeto já inclui `.github/workflows/azure.yml`. Se o assistente do Azure gerar outro workflow, desative a duplicação e use apenas um fluxo de publicação validado.
 4. Copie o deployment token do recurso para o secret de repositório `AZURE_STATIC_WEB_APPS_API_TOKEN`.
 5. Preencha as variables VITE_PARSE_APP_ID e VITE_PARSE_JAVASCRIPT_KEY. O workflow fixa o endpoint oficial Back4App; se houver endpoint customizado, ajuste workflow e CSP juntos.
-6. Integre em main. A publicação roda após o workflow CI concluir com sucesso para um push em main, ou por acionamento manual. O fluxo manual também executa testes unitários e build, mas o E2E real precisa ser conferido no CI.
+6. Defina também a variable AZURE_DEPLOY_ENABLED=true para ativar a publicação automática; até configurar o token, ela permanece desativada. Integre em main. A publicação roda após o workflow CI concluir com sucesso para um push em main, ou por acionamento manual. O fluxo manual também executa testes unitários e build, mas o E2E real precisa ser conferido no CI.
 7. Abra o endereço HTTPS entregue pelo Azure, crie a conta e finalize uma partida. Confira o resultado real no Back4App antes de considerar o deploy validado.
 
 Build: `npm ci` e `npm run build`; artefato: `dist`. O arquivo `staticwebapp.config.json` deve estar na raiz de dist após o build. O workflow envia a pasta já compilada com `skip_app_build: true`. Ele recusa publicar se as chaves cliente não estiverem configuradas.
 
 Referência: https://learn.microsoft.com/en-us/azure/static-web-apps/build-configuration
+
+## Recursos desta equipe
+
+- Repositório privado: https://github.com/vscaueh/cloudquiz-grupo-1
+- Produção Azure (Free, rg-cloudquiz): https://victorious-pond-0a0cb9d10.5.azurestaticapps.net
+- Primeiro envio Azure feito pela CLI oficial com token local, sem cadastrar o token no GitHub.
+- O arquivo .env.example contém apenas a configuração pública do cliente para este app. O Codespaces copia esse exemplo para .env ao preparar o ambiente.
