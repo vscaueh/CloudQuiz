@@ -4,7 +4,7 @@ Mini-game de perguntas sobre computação em nuvem. HTML, CSS e JavaScript (temp
 
 ## Estado desta versão - 10/11/2026
 
-O código do frontend, Cloud Code, banco inicial de 24 questões, testes, configuração do Codespaces e workflows estão implementados. Ainda não há um Back4App nem um Azure da equipe conectados. A publicação e o teste com os serviços reais dependem dessas contas. **Esta versão não é ainda o pacote final do AVA.**
+Frontend e Cloud Code implementados. Back4App conectado, 24 perguntas carregadas, classes protegidas e índices únicos confirmados. Login, partida completa, ranking, histórico e restauração da sessão passaram em teste real no navegador. Recurso Azure Static Web Apps criado no plano Free. Consulte docs/VALIDACAO.md e docs/ENTREGA-AVA.md para a situação de publicação e entrega. **O vídeo e o relatório final ainda serão preparados.**
 
 Sem configuração, o site oferece **modo treino**, com um banco separado de perguntas e resultados somente na memória da sessão. Ele não cria contas, não simula login e não anuncia gravação em nuvem. Use-o para conferir a experiência, não como prova dos requisitos de integração.
 

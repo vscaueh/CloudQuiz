@@ -1,17 +1,13 @@
-# Verificação desta versão
+# Validação - 10/11/2026
 
-Data: 10/11/2026.
+- Vitest: 9 testes aprovados.
+- Navegador local: 3 testes aprovados, incluindo fluxo real no Back4App (login, sessão após recarga, partida de dez perguntas, resultado salvo, ranking, histórico e logout) e treino/layout móvel de 390 px.
+- Verificação remota administrativa: 11 verificações aprovadas; relatório em remote-verification.json. Pontuação de 1.000 pontos com dez acertos; gabarito privado; consulta direta às classes negada; acesso de outro jogador à partida negado; reenvio idempotente e alteração posterior negada.
+- Índices únicos no Back4App: Answer.dedupeKey e Score.matchKey confirmados como SUCCESS/Unique=True no painel.
+- Banco com 24 perguntas reais. Cloud Code publicado e executado.
+- GitHub Actions: execução 42904536275 aprovada no PR #1. Teste de nuvem no CI ainda depende das credenciais dedicadas; o teste real foi executado no computador, não se confunde com o CI.
+- Build de produção concluído com configuração pública do app.
 
-## Executado
+## Pendências de validação
 
-- Vitest: 9 testes aprovados, cobrindo integridade de 24 perguntas, validação de conta, exigência de sessão, ausência de gabarito no retorno, propriedade da partida, índice inválido, pergunta fora de ordem, 10 acertos/1.000 pontos, pontuação falsificada ignorada, repetição idempotente, concorrência simulada e pontuação zero.
-- Testes de navegador: partida de treino completa, resultado, histórico, placar, saída, escolha obrigatória e layout em 390 px. 2 testes aprovados.
-- Build de produção concluído.
-- npm audit das dependências de produção: nenhuma vulnerabilidade reportada na consulta.
-- Interface inspecionada no navegador.
-
-## Limites
-
-O repositório de teste do serviço é em memória e simula o contrato de índices únicos. Isso não comprova índices em um banco real. O treino não usa uma conta real nem persiste dados em nuvem. O teste E2E de Back4App ficou **skipped**, pois o usuário ainda não possui as contas do Back4App e do Azure configuradas.
-
-Não foram verificados nesta etapa: instalação do Cloud Code no runtime Back4App, CLP/ACL remotas, configuração de senha, criação dos índices no MongoDB, envio de e-mail, persistência após novo login, GitHub Actions no GitHub e deploy Azure. Esses itens devem passar antes de gravar o vídeo e finalizar o relatório.
+Publicação e teste no endereço Azure; execução em Codespaces; sincronização das últimas correções no GitHub; entrega do relatório e gravação do vídeo. Não foram testados envio de e-mail ou recuperação de senha, funcionalidades que esta versão não oferece. A configuração de política mínima de senha do servidor depende das opções disponíveis no plano; a interface exige oito caracteres e o trigger aplica a validação quando o Parse disponibiliza a senha.

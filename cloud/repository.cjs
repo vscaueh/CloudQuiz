@@ -1,6 +1,6 @@
 function createRepository(Parse) {
   const master={useMasterKey:true};
-  const ptr=(name,id)=>Parse.Object.createWithoutData(name,id);
+  const ptr=(name,id)=>{const object=new Parse.Object(name);object.id=id;return object;};
   const matchData=o=>({id:o.id,playerId:o.get('player').id,nickname:o.get('nickname'),questions:o.get('questionSet'),startedAt:o.createdAt});
   const answerData=o=>({questionId:o.get('questionId'),selectedIndex:o.get('selectedIndex'),isCorrect:o.get('isCorrect')});
   const resultData=o=>({id:o.id,matchId:o.get('match').id,nickname:o.get('nicknameSnapshot'),points:o.get('points'),correctCount:o.get('correctCount'),finishedAt:o.createdAt.toISOString()});
