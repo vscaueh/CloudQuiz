@@ -12,4 +12,12 @@
 
 ## Pendências de validação
 
-Execução em Codespaces; entrega do relatório e gravação do vídeo. Não foram testados envio de e-mail ou recuperação de senha, funcionalidades que esta versão não oferece. A configuração de política mínima de senha do servidor depende das opções disponíveis no plano; a interface exige oito caracteres e o trigger aplica a validação quando o Parse disponibiliza a senha.
+entrega do relatório e gravação do vídeo. Não foram testados envio de e-mail ou recuperação de senha, funcionalidades que esta versão não oferece. A configuração de política mínima de senha do servidor depende das opções disponíveis no plano; a interface exige oito caracteres e o trigger aplica a validação quando o Parse disponibiliza a senha.
+
+## Codespaces validado
+
+Ambiente reconstruído com javascript-node:22-bookworm após corrigir a tag indisponível. Nove testes unitários aprovados e build de produção concluído no próprio Codespaces. Servidor Vite em execução na porta 5173; requisição HTTP interna retornou o HTML do CloudQuiz. Prévia encaminhada com visibilidade Private. O fluxo visual completo foi testado no Azure; não foi repetido no endereço privado encaminhado.
+
+Editor: https://fuzzy-barnacle-7v96pj7p49652qx7.github.dev/
+
+Prévia: https://fuzzy-barnacle-7v96pj7p49652qx7-5173.app.github.dev/
