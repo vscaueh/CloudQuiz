@@ -1,0 +1,5 @@
+{
+  "name": "CloudQuiz", "image": "mcr.microsoft.com/devcontainers/javascript-node:1-24-bookworm",
+  "forwardPorts": [5173], "portsAttributes": { "5173": { "label": "CloudQuiz", "onAutoForward": "notify" } },
+  "postCreateCommand": "npm ci && (test -f .env || cp .env.example .env)", "customizations": { "vscode": { "settings": { "editor.formatOnSave": true } } }
+}

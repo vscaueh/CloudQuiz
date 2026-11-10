@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';
+const folder=new URL('../cloud/',import.meta.url);
+const read=name=>fs.readFile(new URL(name,folder),'utf8');
+const wrap=(name,code)=>`const ${name} = (()=>{const module={exports:{}};\n${code}\nreturn module.exports;})();\n`;
+let code='// CloudQuiz - gerado por scripts/bundle-cloud.mjs\n';
+code+=wrap('_rules',await read('rules.cjs'));
+code+=wrap('_service',(await read('service.cjs')).replace("require('./rules.cjs')",'_rules'));
+code+=wrap('_repository',await read('repository.cjs'));
+code+=(await read('main.js')).replace("require('./service.cjs')",'_service').replace("require('./repository.cjs')",'_repository').replace("require('./rules.cjs')",'_rules');
+await fs.mkdir(new URL('../deploy/cloud/',import.meta.url),{recursive:true});
+await fs.writeFile(new URL('../deploy/cloud/main.js',import.meta.url),code);
+console.log('deploy/cloud/main.js gerado para upload no painel Back4App.');
