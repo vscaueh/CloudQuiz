@@ -1,0 +1,27 @@
+{
+  "name": "cloudquiz-grupo-1",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "setup:back4app": "node scripts/setup-back4app.mjs"
+  },
+  "dependencies": {
+    "events": "3.3.0",
+    "parse": "8.7.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "mongodb": "4.17.2",
+    "vite": "8.3.7",
+    "vitest": "5.1.0"
+  }
+}
