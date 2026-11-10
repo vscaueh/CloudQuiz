@@ -38,3 +38,11 @@ Referência: https://learn.microsoft.com/en-us/azure/static-web-apps/build-confi
 - Produção Azure (Free, rg-cloudquiz): https://victorious-pond-0a0cb9d10.5.azurestaticapps.net
 - Primeiro envio Azure feito pela CLI oficial com token local, sem cadastrar o token no GitHub.
 - O arquivo .env.example contém apenas a configuração pública do cliente para este app. O Codespaces copia esse exemplo para .env ao preparar o ambiente.
+
+## Codespaces desta equipe
+
+- Editor: https://fuzzy-barnacle-7v96pj7p49652qx7.github.dev/
+- Prévia privada (porta 5173): https://fuzzy-barnacle-7v96pj7p49652qx7-5173.app.github.dev/
+- Nove testes e build passaram neste ambiente; servidor Vite respondeu ao teste HTTP interno.
+- A prévia é privada e exige acesso autorizado. Ao suspender o Codespaces, a prévia deixa de responder. Para retomar: abra o editor e execute npm run dev -- --port 5173 --strictPort no terminal.
+- Para a demonstração do jogo use o Azure, que é público. O acesso do professor ao código e ao ambiente deve ser combinado antes da entrega; o repositório continua privado.

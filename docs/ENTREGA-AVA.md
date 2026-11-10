@@ -6,7 +6,7 @@
 | Azure | https://victorious-pond-0a0cb9d10.5.azurestaticapps.net — publicado no plano Free e testado com Back4App |
 | Back4App | Cloud Code publicado, 24 perguntas, autenticação, partidas, respostas e resultados reais; classes privadas e índices únicos confirmados |
 | GitHub Actions | Testes e build aprovados nos PRs; deploy Azure inicial manual pela CLI oficial |
-| Codespaces | Configuração pronta; conferir sessão e link de preview |
+| Codespaces | Ambiente executado, nove testes e build aprovados; editor e prévia privada registrados em AZURE-E-GITHUB.md |
 | Relatório técnico | Preparar a versão final com links, arquitetura, execução e evidências |
 | Vídeo obrigatório | Ainda não gravado; um vídeo por equipe, pode ser apresentado por apenas um integrante |
 
