@@ -34,7 +34,7 @@ Referência: https://learn.microsoft.com/en-us/azure/static-web-apps/build-confi
 
 ## Recursos desta equipe
 
-- Repositório privado: https://github.com/vscaueh/cloudquiz-grupo-1
+- Repositório público: https://github.com/vscaueh/CloudQuiz
 - Produção Azure (Free, rg-cloudquiz): https://victorious-pond-0a0cb9d10.5.azurestaticapps.net
 - Primeiro envio Azure feito pela CLI oficial com token local, sem cadastrar o token no GitHub.
 - O arquivo .env.example contém apenas a configuração pública do cliente para este app. O Codespaces copia esse exemplo para .env ao preparar o ambiente.
@@ -42,7 +42,13 @@ Referência: https://learn.microsoft.com/en-us/azure/static-web-apps/build-confi
 ## Codespaces desta equipe
 
 - Editor: https://fuzzy-barnacle-7v96pj7p49652qx7.github.dev/
-- Prévia privada (porta 5173): https://fuzzy-barnacle-7v96pj7p49652qx7-5173.app.github.dev/
+- Prévia pública (porta 5173): https://fuzzy-barnacle-7v96pj7p49652qx7-5173.app.github.dev/
 - Nove testes e build passaram neste ambiente; servidor Vite respondeu ao teste HTTP interno.
-- A prévia é privada e exige acesso autorizado. Ao suspender o Codespaces, a prévia deixa de responder. Para retomar: abra o editor e execute npm run dev -- --port 5173 --strictPort no terminal.
-- Para a demonstração do jogo use o Azure, que é público. O acesso do professor ao código e ao ambiente deve ser combinado antes da entrega; o repositório continua privado.
+- A prévia está pública; o editor exige acesso autorizado. Ao suspender o Codespaces, a prévia deixa de responder. Para retomar: abra o editor e execute npm run dev -- --port 5173 --strictPort no terminal.
+- Para a demonstração do jogo use o Azure, que é público. O código está público; a prévia exige manter o ambiente em execução durante a avaliação.
+
+## Atualização para avaliação - 11/11/2026
+
+O repositório está público. A prévia da porta 5173 também está pública, sem login no GitHub, mas depende do Codespaces ligado. No primeiro acesso, pode haver aviso Continue. O editor permanece associado à conta do proprietário.
+
+Integração real no Actions aprovada: https://github.com/vscaueh/CloudQuiz/actions/runs/43057529563 . Foram configurados apenas os secrets da conta de jogador dedicada, não a Master Key. O deploy automático Azure segue desativado; a hospedagem pública já funciona.
