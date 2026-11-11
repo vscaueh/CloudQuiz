@@ -8,7 +8,7 @@ permissions:
   contents: read
 jobs:
   frontend-and-service:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -18,9 +18,13 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
-      - run: npx playwright install --with-deps chromium
-      - run: npm run test:e2e
+      - name: Testar interface e Back4App real
+        run: |
+          test -n "$CLOUDQUIZ_TEST_USERNAME"
+          test -n "$CLOUDQUIZ_TEST_PASSWORD"
+          npm run test:e2e
         env:
+          CHROME_PATH: /usr/bin/google-chrome
           VITE_PARSE_APP_ID: ${{ vars.VITE_PARSE_APP_ID }}
           VITE_PARSE_JAVASCRIPT_KEY: ${{ vars.VITE_PARSE_JAVASCRIPT_KEY }}
           VITE_PARSE_SERVER_URL: https://parseapi.back4app.com
