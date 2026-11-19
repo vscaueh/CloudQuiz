@@ -1,5 +1,9 @@
 # CloudQuiz - Grupo 1
 
+🎮 **[Jogar CloudQuiz online](https://victorious-pond-0a0cb9d10.5.azurestaticapps.net/)**
+
+Acesse pelo navegador, crie sua conta e comece uma partida.
+
 Mini-game de perguntas sobre computação em nuvem. HTML, CSS e JavaScript (template vanilla com Vite), Back4App/Parse, GitHub Codespaces, GitHub Actions e Azure Static Web Apps.
 
 ## Estado desta versão - 10/11/2026
